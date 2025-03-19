@@ -2,9 +2,6 @@
 import { useEffect, useState } from 'react'
 
 // ** MUI Imports
-import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
-import CardHeader from '@mui/material/CardHeader'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -13,30 +10,20 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Alert from '@mui/material/Alert'
 import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
-import Checkbox from '@mui/material/Checkbox'
 import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
-import Box, { BoxProps } from '@mui/material/Box'
+import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import FormControl from '@mui/material/FormControl'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import OutlinedInput from '@mui/material/OutlinedInput'
-import { styled, useTheme } from '@mui/material/styles'
 import FormHelperText from '@mui/material/FormHelperText'
-import InputAdornment from '@mui/material/InputAdornment'
-import FormControlLabel from '@mui/material/FormControlLabel'
 import Modal from  '@mui/material/Modal'
 import Paper from '@mui/material/Paper'
 import EditIcon from '@mui/icons-material/Edit'
 import AddIcon from '@mui/icons-material/Add'
-
-// ** Icon Imports
-import Icon from 'src/@core/components/icon'
 
 // ** Third Party Imports
 import * as yup from 'yup'
@@ -48,18 +35,14 @@ import { useProdutos } from 'src/hooks/useProdutos'
 import { useCategoriasProdutos } from 'src/hooks/useCategoriasProdutos'
 import { useSettings } from 'src/@core/hooks/useSettings'
 import { useAuth } from 'src/hooks/useAuth'
-import { ProdutosProvider } from 'src/context/ProdutosContext'
 
 
 const Produtos = () => {
   // ** Hooks
   const Produtos = useProdutos()
   const { settings } = useSettings()
-  const auth = useAuth()
   const categoriaProdutos = useCategoriasProdutos()
  
-  // ** Vars
-  const { skin } = settings
 
   // ** States
   const [deleteError, setDeleteError] = useState<string | null>(null)

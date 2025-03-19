@@ -1,5 +1,5 @@
 // ** React Imports
-import { createContext, useEffect, useState, ReactNode } from 'react'
+import { createContext, useState, ReactNode } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
@@ -9,14 +9,12 @@ import axios from 'axios'
 
 // ** Config
 import categoriaProdutos from 'src/configs/categoriaProdutos'
-import authConfig from 'src/configs/auth'
 
 // ** Hooks
 import { useAuth } from 'src/hooks/useAuth'
 
 // ** Types
 import { CategoriaProdutosValuesType, CategoriaProdutosParams, ErrCallbackType, CategoriaProdutosDataType } from './types'
-import { boolean } from 'yup'
 
 // ** Defaults
 const defaultProvider: CategoriaProdutosValuesType = {

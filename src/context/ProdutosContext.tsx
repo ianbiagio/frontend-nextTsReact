@@ -1,5 +1,5 @@
 // ** React Imports
-import { createContext, useEffect, useState, ReactNode } from 'react'
+import { createContext, useState, ReactNode } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
@@ -9,14 +9,12 @@ import axios from 'axios'
 
 // ** Config
 import produtosConfig from 'src/configs/produtosConfig'
-import authConfig from 'src/configs/auth'
 
 // ** Hooks
 import { useAuth } from 'src/hooks/useAuth'
 
 // ** Types
 import { ProdutosValuesType, ProdutosParams, ErrCallbackType, ProdutosDataType } from './types'
-import { boolean } from 'yup'
 
 // ** Defaults
 const defaultProvider: ProdutosValuesType = {
@@ -45,7 +43,6 @@ const ProdutosProvider = ({ children }: Props) => {
     const [produtos, setProdutos] = useState<ProdutosDataType[] >(defaultProvider.produtos)
 
     // ** Hooks
-    const router = useRouter()
     const auth = useAuth()
     
     // **Token
